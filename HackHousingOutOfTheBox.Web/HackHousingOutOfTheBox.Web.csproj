@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B77AF21A-839C-4D8C-987D-E36B07DDED53}</ProjectGuid>
+    <ProjectGuid>{3A61D3EB-03C1-4818-A289-CA9FDF952FA4}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HackHousingOutOfTheBox</RootNamespace>
-    <AssemblyName>HackHousingOutOfTheBox</AssemblyName>
+    <RootNamespace>HackHousingOutOfTheBox.Web</RootNamespace>
+    <AssemblyName>HackHousingOutOfTheBox.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -207,7 +207,6 @@
     <Folder Include="Content\" />
     <Folder Include="Filters\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -228,9 +227,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49972</DevelopmentServerPort>
+          <DevelopmentServerPort>50186</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49972/</IISUrl>
+          <IISUrl>http://localhost:49924/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

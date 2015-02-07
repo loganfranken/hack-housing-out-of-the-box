@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace HackHousingOutOfTheBox
+namespace HackHousingOutOfTheBox.Web
 {
     public class BundleConfig
     {
