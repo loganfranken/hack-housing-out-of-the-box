@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackHousingOutOfTheBox.Web", "HackHousingOutOfTheBox.Web\HackHousingOutOfTheBox.Web.csproj", "{3A61D3EB-03C1-4818-A289-CA9FDF952FA4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackHousingOutOfTheBox.Services", "HackHousingOutOfTheBox.Services\HackHousingOutOfTheBox.Services.csproj", "{48116CC2-2180-4FC8-97C2-7C251359AD64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3A61D3EB-03C1-4818-A289-CA9FDF952FA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A61D3EB-03C1-4818-A289-CA9FDF952FA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A61D3EB-03C1-4818-A289-CA9FDF952FA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48116CC2-2180-4FC8-97C2-7C251359AD64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48116CC2-2180-4FC8-97C2-7C251359AD64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48116CC2-2180-4FC8-97C2-7C251359AD64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48116CC2-2180-4FC8-97C2-7C251359AD64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
