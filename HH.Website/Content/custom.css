@@ -1,6 +1,6 @@
-﻿.demand-wrapper h3
+﻿.demand-wrapper
 {
-    text-align: center;
+    padding-left: 30px;
 }
 
 .demand-wrapper .demand-number
@@ -10,7 +10,6 @@
     color: #FFF;
     font-size: 6em;
     height: 130px;
-    margin: 0 auto;
     padding-top: 0.1em;
     text-align: center;
     width: 130px;
@@ -20,7 +19,6 @@
 {
     font-weight: bold;
     margin-top: 0.5em;
-    text-align: center;
 }
 
 .workflow-view
