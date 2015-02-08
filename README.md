@@ -6,7 +6,7 @@ provide housing for tenants who qualify for the Housing Choice Voucher Program.
 This application was developed on the weekend of February 6th-8th, 2015 for the
 [Zillow Hack Housing hackathon](http://www.zillow.com/wikipages/Hack-Housing-Empowering-Smarter-Decisions-Contest/).
 
-![Screenshot of application](screenshot.jpg)
+![Screenshot of application](screenshot.png)
 
 ## Challenge and Approach
 
