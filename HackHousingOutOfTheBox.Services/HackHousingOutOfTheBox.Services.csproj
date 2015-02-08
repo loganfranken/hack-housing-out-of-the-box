@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArcGisBaseUri.cs" />
     <Compile Include="FairMarketRentService.cs" />
     <Compile Include="GeocodingService.cs" />
     <Compile Include="PublicHousingAuthorityInfoService.cs" />

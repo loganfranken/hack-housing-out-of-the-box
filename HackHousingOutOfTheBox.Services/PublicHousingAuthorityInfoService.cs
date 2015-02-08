@@ -16,8 +16,8 @@ namespace HackHousingOutOfTheBox.Services
 
         private async Task<PublicHousingAuthorityInfo> GetPublicHousingAuthorityInfoAsync(string city, string state)
         {
-            var uri = "http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/PublicHousingAuthorities/FeatureServer/0/";
-            var queryTask = new QueryTask(new Uri(uri));
+            ArcGisBaseUri uri = new ArcGisBaseUri("VTyQ9soqVukalItT", "PublicHousingAuthorities");
+            var queryTask = new QueryTask(new Uri(uri.ToString()));
 
             var timeWindow = new Esri.ArcGISRuntime.Data.TimeExtent(DateTime.Now.Subtract(new TimeSpan(0, 5, 0, 0)), DateTime.Now);
 

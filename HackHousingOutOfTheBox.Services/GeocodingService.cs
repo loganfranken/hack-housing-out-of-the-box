@@ -15,13 +15,15 @@ namespace HackHousingOutOfTheBox.Services
             IGeocoder geocoder = new GoogleGeocoder();
             IEnumerable<Address> addresses = geocoder.Geocode(input);
 
-            Address address = addresses.First();
+            GoogleAddress address = (GoogleAddress) addresses.First();
 
             return new LocationInfo
             {
                 Latitude = address.Coordinates.Latitude.ToString(),
-                Longitude = address.Coordinates.Longitude.ToString()
-            };
+                Longitude = address.Coordinates.Longitude.ToString(),
+                City = address[GoogleAddressType.Locality].LongName,
+                State = address[GoogleAddressType.AdministrativeAreaLevel1].ShortName
+           };
         }
     }
 }

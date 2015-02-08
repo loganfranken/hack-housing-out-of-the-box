@@ -23,8 +23,8 @@ namespace HackHousingOutOfTheBox.ConsoleTest
             GeocodingService geoCodingService = new GeocodingService();
             LocationInfo locationInfo = geoCodingService.Geocode("150 GRANDVIEW WAY MISSOULA MT");
 
-            FairMarketRentService fmrService = new FairMarketRentService();
-            FairMarketRentInfo fmrInfo = fmrService.GetFairMarketRent(locationInfo.Latitude, locationInfo.Longitude);
+            PublicHousingAuthorityInfoService phaiService = new PublicHousingAuthorityInfoService();
+            PublicHousingAuthorityInfo info = phaiService.GetPublicHousingAuthorityInfo(locationInfo.City, locationInfo.State);
 
             //FairMarketRentService service = new FairMarketRentService();
             //service.GetFairMarketRent("King County", "WA", 3);
@@ -93,8 +93,9 @@ queryParams.Where = "(STD_ADDR = '150 Grandview Way' AND STD_CITY = 'Missoula' A
 queryParams.OutFields = OutFields.All;
 
             QueryResult queryResult = await queryTask.ExecuteAsync(queryParams);
-        }
+        }*/
 
+        /*
         public async static void GeocodeAddress(string text)
         {
             var uri = new Uri("http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer");
@@ -112,7 +113,9 @@ queryParams.OutFields = OutFields.All;
             string state = results[0].Feature.Attributes["Region"].ToString();
             string postalCode = results[0].Feature.Attributes["Postal"].ToString();
         }
+         * */
 
+        /*
         public static void GeocodeGoogleAddress(string text)
         {
             IGeocoder geocoder = new GoogleGeocoder();
