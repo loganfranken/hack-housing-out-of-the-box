@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackHousingOutOfTheBox.Web"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackHousingOutOfTheBox.Services", "HackHousingOutOfTheBox.Services\HackHousingOutOfTheBox.Services.csproj", "{48116CC2-2180-4FC8-97C2-7C251359AD64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackHousingOutOfTheBox.ConsoleTest", "HackHousingOutOfTheBox.ConsoleTest\HackHousingOutOfTheBox.ConsoleTest.csproj", "{E2FEE651-4C41-4352-9A62-D00BA883AAD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackHousingOutOfTheBox", "HackHousingOutOfTheBox\HackHousingOutOfTheBox.csproj", "{A5946EDC-D99D-40E9-B61B-3091ED7493FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{48116CC2-2180-4FC8-97C2-7C251359AD64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48116CC2-2180-4FC8-97C2-7C251359AD64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48116CC2-2180-4FC8-97C2-7C251359AD64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2FEE651-4C41-4352-9A62-D00BA883AAD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2FEE651-4C41-4352-9A62-D00BA883AAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2FEE651-4C41-4352-9A62-D00BA883AAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2FEE651-4C41-4352-9A62-D00BA883AAD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5946EDC-D99D-40E9-B61B-3091ED7493FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5946EDC-D99D-40E9-B61B-3091ED7493FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5946EDC-D99D-40E9-B61B-3091ED7493FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5946EDC-D99D-40E9-B61B-3091ED7493FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

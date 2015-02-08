@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{48116CC2-2180-4FC8-97C2-7C251359AD64}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{E2FEE651-4C41-4352-9A62-D00BA883AAD3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HackHousingOutOfTheBox.Services</RootNamespace>
-    <AssemblyName>HackHousingOutOfTheBox.Services</AssemblyName>
+    <RootNamespace>HackHousingOutOfTheBox.ConsoleTest</RootNamespace>
+    <AssemblyName>HackHousingOutOfTheBox.ConsoleTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,6 +33,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Esri.ArcGISRuntime, Version=10.2.4.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="Geocoding">
+      <HintPath>..\packages\Geocoding.net.3.2.1\lib\net40\Geocoding.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Exchange.WebServices">
       <HintPath>..\packages\EWS-Api-2.1.1.0.0\lib\net35\Microsoft.Exchange.WebServices.dll</HintPath>
     </Reference>
@@ -56,14 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FairMarketRentService.cs" />
-    <Compile Include="GeocodingService.cs" />
+    <Compile Include="JavaScriptSerializer.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HackHousingOutOfTheBox.Services\HackHousingOutOfTheBox.Services.csproj">
+      <Project>{48116cc2-2180-4fc8-97c2-7c251359ad64}</Project>
+      <Name>HackHousingOutOfTheBox.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HackHousingOutOfTheBox\HackHousingOutOfTheBox.csproj">
       <Project>{a5946edc-d99d-40e9-b61b-3091ed7493fa}</Project>
       <Name>HackHousingOutOfTheBox</Name>
