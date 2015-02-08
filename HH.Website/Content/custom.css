@@ -1,4 +1,25 @@
-﻿.demand-wrapper .demand-number
+﻿.demand-wrapper h3
 {
+    text-align: center;
+}
+
+.demand-wrapper .demand-number
+{
+    background: #04B2D9;
+    border-radius: 100%;
+    color: #FFF;
     font-size: 6em;
+    height: 130px;
+    margin: 0 auto;
+    padding-top: 0.1em;
+    text-align: center;
+    text-shadow: 0 2px 0 #333;
+    width: 130px;
+}
+
+.demand-wrapper .demand-info
+{
+    font-weight: bold;
+    margin-top: 0.5em;
+    text-align: center;
 }
