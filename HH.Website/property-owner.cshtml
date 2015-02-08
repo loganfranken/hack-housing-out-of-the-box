@@ -1,0 +1,158 @@
+﻿@using SODA;
+@using System;
+@using System.Collections.Generic;
+@using System.IO;
+@using System.Linq;
+@using System.Net;
+@using System.Text;
+@using System.Threading.Tasks;
+@using Esri.ArcGISRuntime.Tasks.Geocoding;
+@using Esri.ArcGISRuntime.Geometry;
+@using Esri.ArcGISRuntime.Tasks.Query;
+@using HackHousingOutOfTheBox;
+@using HackHousingOutOfTheBox.Services;
+@using Geocoding.Google;
+@using Geocoding;
+@using Newtonsoft.Json;
+@{
+    Layout = "~/Shared/_BootstrapLayout.cshtml";
+    Page.Title = "Landlord";
+    var address = Request.Form["address"];
+    var pha = new PublicHousingAuthorityInfo();
+    var fmr = new Dictionary<string, int>();
+
+    var message = "";
+    if (IsPost && address != null)
+    {
+        GeocodingService geoCodingService = new GeocodingService();
+        LocationInfo locationInfo = geoCodingService.Geocode("150 GRANDVIEW WAY MISSOULA MT");
+        //LocationInfo locationInfo = geoCodingService.Geocode(address);
+
+        // hangs
+        // PublicHousingAuthorityInfoService phaiService = new PublicHousingAuthorityInfoService();
+        // PublicHousingAuthorityInfo info = phaiService.GetPublicHousingAuthorityInfo(locationInfo.City, locationInfo.State);
+        //pha = info.Name + "<br>" +
+        //      info.Address + "<br>" + info.City + ", " + info.State + " " + info.PostalCode + "<br>" +
+        //      info.Email + "<br>" +
+        //      info.Phone;
+
+        pha.Name = "Missoula Housing Authority";
+        pha.Address = "1235 34th St";
+        pha.City = "Missoula";
+        pha.State = "MT";
+        pha.PostalCode = "59801";
+        pha.Email = "ldavidson@missoulahousing.org";
+        pha.Phone = "(406) 549-4113";
+
+        fmr.Add("Efficient", 624);
+        fmr.Add("One Bedroom", 676);
+        fmr.Add("Two Bedroom", 845);
+        fmr.Add("Three Bedroom", 1212);
+        fmr.Add("Four Bedroom", 1497);
+
+    }
+}
+
+<script>
+
+</script>
+<div style="margin-top: 100px;">
+
+    <div class="col-md-12">
+        <h1>Welcome, @Page.Title</h1>
+        <form method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="address" value="@address" placeholder="Search for...150 GRANDVIEW WAY MISSOULA MT">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default btn-primary" type="submit">Go!</button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </form>
+        <br />
+    </div>
+    @if (IsPost && address != null)
+    {
+        <div id="result">
+            @*<div class="col-md-4">
+                <img src="~/Images/hack_housing_palette.png" style="width:300px;" />
+            </div>*@
+            <div class="col-md-8">
+                <h3>Property Info / Services</h3>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Recommended for low-income housing</td>
+                            <td>Yes</td>
+                        </tr>
+
+                        <tr>
+                            <td>Eligibility for volunteer clean-up assistance</td>
+                            <td>Approved</td>
+                        </tr>
+                        <tr>
+                            <td>Volunteers can help with:</td>
+                            <td>repair cracks or loose plaster <br /> ventilation system</td>
+                        </tr>
+                        <tr>
+                            <td>Volunteer cannot help with:</td>
+                            <td>No electrical services.</td>
+                        </tr>
+                        <tr>
+                            <td>Rental Income</td>
+                            <td>$138.94</td>
+                        </tr>
+                        <tr>
+                            <td>Projected Rental Income:</td>
+                            <td>$832.05</td>
+                        </tr>
+                        <tr>
+                            <td>Land fair market value:</td>
+                            <td>$17,849.83</td>
+                        </tr>
+                        <tr>
+                            <td>Average fair market value after cleanup</td>
+                            <td>$48,832.94</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Fair Market Rent</h3>
+                <table class="table">
+                    @foreach (KeyValuePair<string, int> pair in fmr)
+                    {
+                        <tr>
+                            <td>@pair.Key</td>
+                            <td>@String.Format("{0:C}", @pair.Value)</td>
+                        </tr>
+                    }
+                </table>
+
+
+                <h3>Local Housing Authority</h3>
+                <div>@pha.Name</div>
+                <div>@pha.Address</div>
+                <div>@pha.City, @pha.State @pha.PostalCode</div>
+                <div>@pha.Email</div>
+                <div>@pha.Phone</div>
+
+                <h3>Apply For Voucher Program</h3>
+                <ul>
+                    <li>Downalod Form 1</li>
+                    <li>Download Form 2</li>
+                    <li>Download Form 3</li>
+                    <li>Download Form 4</li>
+                    <li><a href="~/inspectors">Schedule Inspection</a></li>
+                </ul>
+            </div>
+
+        </div>
+    }
+</div>

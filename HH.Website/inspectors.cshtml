@@ -1,0 +1,28 @@
+﻿@{
+    Page.Title = "List of Inspectors";
+    Layout = "~/Shared/_BootstrapLayout.cshtml";
+}
+
+<div style="margin-top: 100px;">
+    <h1>Inspectors</h1>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Contact Info</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < 10; i++)
+            {
+                <tr>
+                    <td>Inspector @i</td>
+                    <td>@String.Format("(206) 555 - 000{0}", @i)</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
