@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Geocoding;
+using Geocoding.Google;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,18 @@ namespace HackHousingOutOfTheBox.Services
 {
     public class GeocodingService
     {
-        //public string Geocode(string )
+        public LocationInfo Geocode(string input)
+        {
+            IGeocoder geocoder = new GoogleGeocoder();
+            IEnumerable<Address> addresses = geocoder.Geocode(input);
+
+            Address address = addresses.First();
+
+            return new LocationInfo
+            {
+                Latitude = address.Coordinates.Latitude.ToString(),
+                Longitude = address.Coordinates.Longitude.ToString()
+            };
+        }
     }
 }

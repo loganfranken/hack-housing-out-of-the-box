@@ -20,14 +20,11 @@ namespace HackHousingOutOfTheBox.ConsoleTest
     {
         public static void Main(string[] args)
         {
-            /*
-            while(true)
-            {
-                Test();
-            }
-            */
-            FairMarketRentService service = new FairMarketRentService();
-            FairMarketRentInfo info = service.GetFairMarketRent("-122.3359059", "47.614848");
+            GeocodingService geoCodingService = new GeocodingService();
+            LocationInfo locationInfo = geoCodingService.Geocode("150 GRANDVIEW WAY MISSOULA MT");
+
+            FairMarketRentService fmrService = new FairMarketRentService();
+            FairMarketRentInfo fmrInfo = fmrService.GetFairMarketRent(locationInfo.Latitude, locationInfo.Longitude);
 
             //FairMarketRentService service = new FairMarketRentService();
             //service.GetFairMarketRent("King County", "WA", 3);
