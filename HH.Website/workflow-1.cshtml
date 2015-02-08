@@ -61,6 +61,8 @@
                             track the status of your application.
                         </p>
 
+                        <img src="/images/tracking_view.png" width="80%" alt="Tracking Status" />
+
                         <div class="step-control">
                             <a href="#" type="button" class="btn btn-default btn-lg btn-success">Next Step <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                         </div>
@@ -107,5 +109,12 @@
         var $this = $(this);
         event.preventDefault();
         $this.closest('li').removeClass('active').next('li').addClass('active');
+    });
+
+    $('.workflow-view h3').click(function () {
+        $('.workflow-view li.active').removeClass('active');
+        var $this = $(this);
+        event.preventDefault();
+        $this.closest('li').addClass('active');
     });
 </script>
