@@ -1,0 +1,79 @@
+﻿@using SODA;
+@using System;
+@using System.Collections.Generic;
+@using System.IO;
+@using System.Linq;
+@using System.Net;
+@using System.Text;
+@using System.Threading.Tasks;
+@using Esri.ArcGISRuntime.Tasks.Geocoding;
+@using Esri.ArcGISRuntime.Geometry;
+@using Esri.ArcGISRuntime.Tasks.Query;
+@using HackHousingOutOfTheBox;
+@using HackHousingOutOfTheBox.Services;
+@using Geocoding.Google;
+@using Geocoding;
+@using Newtonsoft.Json;
+@{
+    Layout = "~/Shared/_BootstrapLayout.cshtml";
+    Page.Title = "Create an Account";
+}
+<div style="margin-top: 100px;">
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <ol class="workflow-view">
+                <li class="active">
+                    <h3><span class="step-num">Step 1:</span> Contact Local Housing Authority</h3>
+                    <div class="step-details">
+                        <div style="font-weight: bold;">Missoula Housing Authority</div>
+                        <div>1235 34th St</div>
+                        <div>Missoula, MT 59801</div>
+                        <div><a href="mailto:ldavidson@missoulahousing.org">ldavidson@missoulahousing.org</a></div>
+                        <div>(406) 549-4113</div>
+                        
+                        <div class="step-control">
+                            <a href="#" type="button" class="btn btn-default btn-lg btn-success">Next Step <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h3><span class="step-num">Step 2:</span> Submit Forms</h3>
+                    <div class="step-details">
+                        <p>Submit and complete the following forms:</p>
+                        <ul>
+                            <li><a href="#">Sample Form</a></li>
+                        </ul>
+
+                        <div class="step-control">
+                            <a href="#" type="button" class="btn btn-default btn-lg btn-success">Next Step <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h3><span class="step-num">Step 3:</span> Track Approval</h3>
+                </li>
+                <li>
+                    <h3><span class="step-num">Step 4:</span> Complete Inspection</h3>
+                </li>
+                <li>
+                    <h3><span class="step-num">Step 5:</span> Create Listing</h3>
+                </li>
+            </ol>
+        </div>
+        <div class="col-md-4">
+            <a href="#" type="button" class="btn btn-default btn-lg btn-primary">Need Volunteers?</a>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $('.workflow-view .step-control a').click(function (event) {
+        var $this = $(this);
+        event.preventDefault();
+        $this.closest('li').removeClass('active').next('li').addClass('active');
+    });
+</script>

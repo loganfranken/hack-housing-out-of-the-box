@@ -22,3 +22,57 @@
     margin-top: 0.5em;
     text-align: center;
 }
+
+.workflow-view
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.workflow-view .step-details
+{
+    display: none;
+}
+
+.workflow-view>li
+{
+    color: #CCC;
+    border-left: 3px solid #CCC;
+    display: block;
+    font-size: 1.3em;
+    padding: 1em 0 2em 2em;
+}
+
+.workflow-view>li h3
+{
+    font-size: 2em;
+    margin: 0 0 1em 0;
+}
+
+.workflow-view>li.active
+{
+    color: #111;
+    border-color: #04B2D9;
+}
+
+.workflow-view>li.active .step-details
+{
+    display: block;
+}
+
+.workflow-view>li.active h3
+{
+    color: #111;
+    border-color: #04B2D9;
+}
+
+.workflow-view>li.active h3 .step-num
+{
+    font-weight: bold;
+}
+
+.workflow-view .step-control
+{
+    margin-top: 2em;
+}
